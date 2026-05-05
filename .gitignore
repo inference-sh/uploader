@@ -1,0 +1,37 @@
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/vendor/
+example.sh
+.env
+test/test.env
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Build and dependency directories
+/build/
+/bin/
+/pkg/
+/dist/
+
+# Environment and config files
+.env
+*.env
+config.yaml
+config.yml
+
+# Log files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
