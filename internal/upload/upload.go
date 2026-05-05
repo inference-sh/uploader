@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/rhnvrm/simples3"
-	"inference.sh/uploader/internal/reader"
+	"github.com/inference-sh/uploader/internal/reader"
 )
 
 // Config holds the configuration for uploading a file

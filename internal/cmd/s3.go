@@ -4,7 +4,7 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"inference.sh/uploader/internal/upload"
+	"github.com/inference-sh/uploader/internal/upload"
 )
 
 func newS3Cmd(cfg *upload.Config) *cobra.Command {

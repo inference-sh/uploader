@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"inference.sh/uploader/internal/upload"
+	"github.com/inference-sh/uploader/internal/upload"
 )
 
 func NewRootCmd() *cobra.Command {

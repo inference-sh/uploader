@@ -8,7 +8,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"inference.sh/uploader/internal/reader"
+	"github.com/inference-sh/uploader/internal/reader"
 )
 
 // DownloadConfig holds the configuration for downloading a file

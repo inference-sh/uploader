@@ -8,7 +8,7 @@ Works with AWS S3, Cloudflare R2, MinIO, DigitalOcean Spaces, Backblaze B2, and 
 
 **Go:**
 ```bash
-go install inference.sh/uploader@latest
+go install github.com/inference-sh/uploader@latest
 ```
 
 **GitHub Releases:**

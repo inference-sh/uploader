@@ -1,4 +1,4 @@
-module inference.sh/uploader
+module github.com/inference-sh/uploader
 
 go 1.25.0
 

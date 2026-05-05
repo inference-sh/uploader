@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"inference.sh/uploader/internal/cmd"
+	"github.com/inference-sh/uploader/internal/cmd"
 )
 
 func main() {
