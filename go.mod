@@ -1,6 +1,6 @@
 module github.com/inference-sh/uploader
 
-go 1.25.0
+go 1.25.5
 
 require (
 	github.com/rhnvrm/simples3 v0.11.1
