@@ -1,0 +1,42 @@
+name: Update dependency
+
+on:
+  workflow_dispatch:
+    inputs:
+      module:
+        description: "Go module path (e.g. github.com/inference-sh/goutils)"
+        required: true
+      version:
+        description: "Version tag (e.g. v0.10.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Update module
+        run: |
+          go get ${{ inputs.module }}@${{ inputs.version }}
+          go mod tidy
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet go.mod go.sum; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git add go.mod go.sum
+          git commit -m "deps: bump $(basename ${{ inputs.module }}) to ${{ inputs.version }}"
+          git push
