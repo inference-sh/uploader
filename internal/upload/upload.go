@@ -60,6 +60,9 @@ func Upload(cfg *Config) error {
 	if err != nil {
 		return fmt.Errorf("error uploading file: %v", err)
 	}
+	if resp == nil {
+		return fmt.Errorf("nil response from upload request")
+	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {

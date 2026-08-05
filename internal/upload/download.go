@@ -34,6 +34,9 @@ func Download(cfg *DownloadConfig) error {
 	if err != nil {
 		return fmt.Errorf("error downloading file: %v", err)
 	}
+	if resp == nil {
+		return fmt.Errorf("nil response from download request")
+	}
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
