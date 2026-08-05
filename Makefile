@@ -36,4 +36,6 @@ release:
 	@git push origin HEAD $$(git describe --tags --abbrev=0) && \
 	echo "Pushed $$(git describe --tags --abbrev=0)"
 
+include ../scripts/lint.mk
+
 .PHONY: all build clean patch minor major release
